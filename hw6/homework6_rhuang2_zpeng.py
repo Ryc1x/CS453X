@@ -246,6 +246,12 @@ if __name__ == "__main__":
                                     wCheck))
 
     # Find best hyperparameters
+    ############################################################
+    #                          NOTE                            #
+    # There is a problem in this part. We trained the model    #
+    # on the validation set instead of the training set, which #
+    # will probably lead to overfitting.                       #
+    ############################################################
     print("_________ Find best hyperparameters __________")
     print("Neuron\tEpsilon\tBatch\tEpoch")
     findBestHyperparameters(validX, validY) 
